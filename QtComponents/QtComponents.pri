@@ -9,9 +9,17 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    $$PWD/dialogs/basedialog.cpp \
+    $$PWD/dialogs/changepassdialog.cpp \
+    $$PWD/dialogs/logondialog.cpp \
+    $$PWD/dialogs/unlockdialog.cpp
 
 
 HEADERS += \
+    $$PWD/dialogs/basedialog.h \
+    $$PWD/dialogs/changepassdialog.h \
+    $$PWD/dialogs/logondialog.h \
+    $$PWD/dialogs/unlockdialog.h
 
 
 include($$PWD/../QmlComponents/QmlComponents.pri)

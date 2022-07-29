@@ -1,2 +1,7 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/QtComponents">
+        <file>LogonFrame.qml</file>
+        <file>UnlockFrame.qml</file>
+        <file>ChangePassFrame.qml</file>
+    </qresource>
+</RCC>
