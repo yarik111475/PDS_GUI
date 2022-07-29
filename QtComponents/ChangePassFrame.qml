@@ -1,5 +1,7 @@
-import QtQuick 2.0
+import QtQuick 2.12
 
-Item {
-
+Rectangle {
+    color: "red";
+    width: 200;
+    height: 200;
 }

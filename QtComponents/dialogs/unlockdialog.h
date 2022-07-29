@@ -1,13 +1,12 @@
 #ifndef UNLOCKDIALOG_H
 #define UNLOCKDIALOG_H
 
-#include <QDialog>
-#include <QObject>
+#include "basedialog.h"
 
-class UnlockDialog : public QDialog
+class UnlockDialog : public BaseDialog
 {
 public:
-    UnlockDialog();
+    UnlockDialog(QWidget* parent=nullptr);
 };
 
 #endif // UNLOCKDIALOG_H

@@ -2,12 +2,16 @@
 #define BASEDIALOG_H
 
 #include <QDialog>
-#include <QObject>
+
+class QQuickWidget;
 
 class BaseDialog : public QDialog
 {
 public:
-    BaseDialog();
+    BaseDialog(QWidget* parent=nullptr);
+
+protected:
+    QQuickWidget* _quickWidgetPtr {nullptr};
 };
 
 #endif // BASEDIALOG_H

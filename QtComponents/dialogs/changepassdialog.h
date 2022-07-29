@@ -1,12 +1,12 @@
 #ifndef CHANGEPASSDIALOG_H
 #define CHANGEPASSDIALOG_H
 
-#include <QDialog>
+#include "basedialog.h"
 
-class ChangePassDialog : public QDialog
+class ChangePassDialog : public BaseDialog
 {
 public:
-    ChangePassDialog();
+    ChangePassDialog(QWidget* parent=nullptr);
 };
 
 #endif // CHANGEPASSDIALOG_H

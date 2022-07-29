@@ -10,5 +10,10 @@ class TestWidget : public QWidget
 public:
     TestWidget(QWidget *parent = nullptr);
     ~TestWidget();
+
+private slots:
+    void slotChangePassDialog();
+    void slotLogonDialog();
+    void slotUnlockDialog();
 };
 #endif // TESTWIDGET_H

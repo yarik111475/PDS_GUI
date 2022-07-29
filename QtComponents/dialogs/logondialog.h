@@ -1,13 +1,12 @@
 #ifndef LOGONDIALOG_H
 #define LOGONDIALOG_H
 
-#include <QDialog>
-#include <QObject>
+#include "basedialog.h"
 
-class LogonDialog : public QDialog
+class LogonDialog : public BaseDialog
 {
 public:
-    LogonDialog();
+    LogonDialog(QWidget* parent=nullptr);
 };
 
 #endif // LOGONDIALOG_H
