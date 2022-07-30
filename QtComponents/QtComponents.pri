@@ -23,8 +23,6 @@ HEADERS += \
 
 
 include($$PWD/../QmlComponents/QmlComponents.pri)
-QML_IMPORT_PATH += $$PWD/../QmlComponents/SimpleComponents
-QML_IMPORT_PATH += $$PWD/../QmlComponents/ExtComponents
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -7,7 +7,7 @@ Button {
     smooth: true;
     antialiasing: true;
     property color backgroundColor: "white";
-    property color borderColor: Qt.black;
+    property color borderColor: "black";
     property color textColor: "black";
     property int borderRadius: 2;
 

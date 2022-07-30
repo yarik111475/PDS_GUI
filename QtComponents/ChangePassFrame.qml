@@ -1,7 +1,27 @@
 import QtQuick 2.12
+import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
+import SimpleComponents 1.0
 
 Rectangle {
-    color: "red";
     width: 200;
     height: 200;
+
+    Row{
+        id: commandRow;
+        anchors.right: parent.right;
+        anchors.bottom: parent.bottom;
+        anchors.margins: 10;
+        spacing: 10;
+
+        SimpleButton{
+            id: okButton;
+            width: cancelButton.width;
+            text: qsTr("Ok");
+        }
+        SimpleButton{
+            id: cancelButton;
+            text: qsTr("Cancel");
+        }
+    }
 }

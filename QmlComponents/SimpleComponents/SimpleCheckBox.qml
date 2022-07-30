@@ -3,6 +3,7 @@ import QtQuick.Controls 2.12
 
 CheckBox {
     id: control;
+    padding: 0;
 
     indicator: Rectangle{
         height: 20;
