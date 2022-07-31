@@ -53,7 +53,7 @@ ComboBox {
         height: control.height;
 
         contentItem: Text {
-            text: model[control.textRole];
+            text: control.textRole.length==0 ? modelData : model[control.textRole];
             font: control.font;
             renderType: Text.NativeRendering;
             elide: Text.ElideRight;

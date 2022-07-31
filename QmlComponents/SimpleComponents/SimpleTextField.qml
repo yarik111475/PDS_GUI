@@ -19,5 +19,4 @@ TextField {
         border.color: bordered ? borderColor : "transparent";
         radius: borderRadius;
     }
-
 }

@@ -24,15 +24,16 @@ CheckBox {
         }
     }
 
-    background: Rectangle{
-        width: control.width;
-        height: control.height;
-        radius: 5;
-    }
+//    background: Rectangle{
+//        width: control.width;
+//        height: control.height;
+//        radius: 5;
+//    }
 
-    contentItem: SimpleText{
+    contentItem: Text{
         font: control.font;
         text: control.text;
+        renderType: Text.NativeRendering;
         verticalAlignment: Text.AlignVCenter
         leftPadding: control.indicator.width + control.spacing;
     }

@@ -50,6 +50,7 @@ Rectangle {
         }
         SimpleComboBox{
             Layout.fillWidth: true;
+            model: 10;
         }
 
         SimpleCheckBox{
