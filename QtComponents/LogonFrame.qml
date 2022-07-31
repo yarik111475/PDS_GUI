@@ -4,8 +4,9 @@ import QtQuick.Layouts 1.12
 import SimpleComponents 1.0
 
 Rectangle {
+    id: root;
     width: 350;
-    height: 220;
+    height: 200;
 
     GridLayout{
         id: fieldsGrid;
@@ -69,11 +70,22 @@ Rectangle {
             id: okButton;
             width: cancelButton.width;
             text: qsTr("Ok");
+
+            onClicked: {
+                logonDialog.accept();
+            }
         }
         SimpleButton{
             id: cancelButton;
             text: qsTr("Cancel");
+            onClicked: {
+                logonDialog.reject();
+            }
         }
+    }
+
+    Connections{
+        target: logonDialog;
     }
 }
 
