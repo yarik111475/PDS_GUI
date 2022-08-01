@@ -7,6 +7,8 @@
 #include "dialogs/unlockdialog.h"
 #include "dialogs/changepassdialog.h"
 
+#include "widgets/quickwidget.h"
+
 
 TestWidget::TestWidget(QWidget *parent)
     : QWidget(parent)
@@ -20,10 +22,14 @@ TestWidget::TestWidget(QWidget *parent)
     QPushButton* unlockDialogButtonPtr=new QPushButton(QObject::tr("Unlock dialog"));
     QObject::connect(unlockDialogButtonPtr, &QPushButton::clicked,this, &TestWidget::slotUnlockDialog);
 
+    QPushButton* simpleWidgetButtonPtr=new QPushButton(QObject::tr("Simple widget"));
+    QObject::connect(simpleWidgetButtonPtr, &QPushButton::clicked,this, &TestWidget::slotSimpleWidget);
+
     QVBoxLayout* vboxLayoutPtr=new QVBoxLayout;
     vboxLayoutPtr->addWidget(changePassDialogButtonPtr);
     vboxLayoutPtr->addWidget(logonDialogButtonPtr);
     vboxLayoutPtr->addWidget(unlockDialogButtonPtr);
+    vboxLayoutPtr->addWidget(simpleWidgetButtonPtr);
     setLayout(vboxLayoutPtr);
 }
 
@@ -47,5 +53,13 @@ void TestWidget::slotUnlockDialog()
 {
     std::unique_ptr<UnlockDialog> dialogPtr {new UnlockDialog(this)};
     dialogPtr->exec();
+}
+
+void TestWidget::slotSimpleWidget()
+{
+//    std::unique_ptr<QuickWidget> widgetPtr {std::make_unique<QuickWidget>()};
+//    widgetPtr->show();
+    QuickWidget* widgetPtr=new QuickWidget("Simple widget");
+    widgetPtr->show();
 }
 

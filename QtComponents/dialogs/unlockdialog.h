@@ -7,6 +7,7 @@ class UnlockDialog : public BaseDialog
 {
 public:
     UnlockDialog(QWidget* parent=nullptr);
+    UnlockDialog(const QString& title, QWidget* parent=nullptr);
 };
 
 #endif // UNLOCKDIALOG_H

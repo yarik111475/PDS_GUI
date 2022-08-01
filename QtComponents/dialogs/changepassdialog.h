@@ -7,6 +7,7 @@ class ChangePassDialog : public BaseDialog
 {
 public:
     ChangePassDialog(QWidget* parent=nullptr);
+    ChangePassDialog(const QString& title, QWidget* parent=nullptr);
 };
 
 #endif // CHANGEPASSDIALOG_H

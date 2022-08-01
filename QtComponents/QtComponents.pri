@@ -12,14 +12,16 @@ SOURCES += \
     $$PWD/dialogs/basedialog.cpp \
     $$PWD/dialogs/changepassdialog.cpp \
     $$PWD/dialogs/logondialog.cpp \
-    $$PWD/dialogs/unlockdialog.cpp
+    $$PWD/dialogs/unlockdialog.cpp \
+    $$PWD/widgets/quickwidget.cpp
 
 
 HEADERS += \
     $$PWD/dialogs/basedialog.h \
     $$PWD/dialogs/changepassdialog.h \
     $$PWD/dialogs/logondialog.h \
-    $$PWD/dialogs/unlockdialog.h
+    $$PWD/dialogs/unlockdialog.h \
+    $$PWD/widgets/quickwidget.h
 
 
 include($$PWD/../QmlComponents/QmlComponents.pri)

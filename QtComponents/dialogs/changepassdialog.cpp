@@ -9,3 +9,9 @@ ChangePassDialog::ChangePassDialog(QWidget *parent):BaseDialog{parent}
     _quickWidgetPtr->rootContext()->setContextProperty("changePassDialog", this);
     _quickWidgetPtr->setSource(QUrl("qrc:/QtComponents/ChangePassFrame.qml"));
 }
+
+ChangePassDialog::ChangePassDialog(const QString &title, QWidget *parent):BaseDialog{title,parent}
+{
+    _quickWidgetPtr->rootContext()->setContextProperty("changePassDialog", this);
+    _quickWidgetPtr->setSource(QUrl("qrc:/QtComponents/ChangePassFrame.qml"));
+}

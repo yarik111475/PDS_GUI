@@ -3,5 +3,6 @@
         <file>LogonFrame.qml</file>
         <file>UnlockFrame.qml</file>
         <file>ChangePassFrame.qml</file>
+        <file>WidgetFrame.qml</file>
     </qresource>
 </RCC>

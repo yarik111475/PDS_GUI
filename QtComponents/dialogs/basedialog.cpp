@@ -6,7 +6,7 @@
 
 BaseDialog::BaseDialog(QWidget *parent):QDialog{parent}
 {
-    setWindowFlags(Qt::Window|Qt::WindowCloseButtonHint);
+    setWindowFlags(Qt::Window|Qt::WindowCloseButtonHint|Qt::WindowMinimizeButtonHint);
     _quickWidgetPtr=new QQuickWidget(this);
     _quickWidgetPtr->setResizeMode(QQuickWidget::SizeRootObjectToView);
     _quickWidgetPtr->engine()->addImportPath("qrc:/");
@@ -15,4 +15,9 @@ BaseDialog::BaseDialog(QWidget *parent):QDialog{parent}
     vboxLayoutPtr->setContentsMargins(QMargins());
     vboxLayoutPtr->addWidget(_quickWidgetPtr);
     setLayout(vboxLayoutPtr);
+}
+
+BaseDialog::BaseDialog(const QString& title, QWidget *parent):BaseDialog{parent}
+{
+    setWindowTitle(title);
 }

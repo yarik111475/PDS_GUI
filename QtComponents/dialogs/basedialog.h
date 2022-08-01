@@ -9,6 +9,7 @@ class BaseDialog : public QDialog
 {
 public:
     BaseDialog(QWidget* parent=nullptr);
+    BaseDialog(const QString& title, QWidget* parent=nullptr);
 
 protected:
     QQuickWidget* _quickWidgetPtr {nullptr};

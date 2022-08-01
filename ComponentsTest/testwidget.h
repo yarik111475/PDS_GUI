@@ -15,5 +15,6 @@ private slots:
     void slotChangePassDialog();
     void slotLogonDialog();
     void slotUnlockDialog();
+    void slotSimpleWidget();
 };
 #endif // TESTWIDGET_H
