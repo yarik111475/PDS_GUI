@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import SimpleComponents 1.0
+import ExtComponents 1.0
 
 Rectangle {
     id: root;
@@ -52,6 +53,7 @@ Rectangle {
 
         SimpleCheckBox{
             id: showPasswordCheckBox;
+            indicatorColor: "green";
             text: qsTr("Show passwords");
             Layout.row: 3;
             Layout.column: 1;
@@ -66,17 +68,19 @@ Rectangle {
         anchors.margins: 10;
         spacing: 10;
 
-        SimpleButton{
+        GradientButton{
             id: okButton;
             width: cancelButton.width;
+            borderRadius: 10;
             text: qsTr("Ok");
 
             onClicked: {
                 changePassDialog.accept();
             }
         }
-        SimpleButton{
+        GradientButton{
             id: cancelButton;
+            borderRadius: 10;
             text: qsTr("Cancel");
             onClicked: {
                 changePassDialog.reject();

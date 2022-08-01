@@ -1,18 +1,17 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtGraphicalEffects 1.0
-import SimpleControls 1.0
-
 
 CheckBox {
     id: control;
-    width: 15;
-    height: 15;
+    padding: 0
+    height: 20;
+    width: 20;
     focusPolicy: Qt.ClickFocus;
 
     indicator: Rectangle{
-        implicitWidth: control.width;
-        implicitHeight: control.height;
+        height: control.height;
+        width: control.height;
         x: control.leftPadding
         y: parent.height / 2 - height / 2
         border.width: 1;
@@ -39,10 +38,11 @@ CheckBox {
         }
     }
 
-    contentItem: SimpleText{
+    contentItem: Text{
         font: control.font;
         text: control.text;
         verticalAlignment: Text.AlignVCenter
+        renderType: Text.NativeRendering;
         leftPadding: control.indicator.width + control.spacing;
         color: control.enabled ? "black" : "dimgray";
     }

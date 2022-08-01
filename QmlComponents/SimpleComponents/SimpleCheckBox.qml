@@ -3,11 +3,14 @@ import QtQuick.Controls 2.12
 
 CheckBox {
     id: control;
+    height: 20;
+    width: 20;
     padding: 0;
+    property color indicatorColor: "gray";
 
     indicator: Rectangle{
-        height: 20;
-        width: 20;
+        height: control.height;
+        width: control.height;
         border.width: 1;
         border.color: "black";
         x: control.leftPadding
@@ -19,7 +22,7 @@ CheckBox {
             height: parent.height/2;
             anchors.centerIn: parent;
             radius: 2;
-            color: "dimgray";
+            color: indicatorColor;
             visible: control.checked
         }
     }

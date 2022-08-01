@@ -6,13 +6,14 @@ Button {
     id: control
     smooth: true;
     antialiasing: true;
+    property int borderRadius: 2;
 
     background: Rectangle{
         implicitWidth: contentItem.implicitWidth + contentItem.anchors.leftMargin + contentItem.anchors.rightMargin;
         implicitHeight: contentItem.implicitHeight + contentItem.anchors.margins * 2;
         border.color: control.enabled ? "#FF6495ED" : "darkgray";
         border.width: 2;
-        radius: 5;
+        radius: borderRadius;
 
         gradient: control.enabled ? enableGradient : disableGradient;
 
