@@ -21,6 +21,8 @@ HEADERS += \
     $$PWD/dialogs/changepassdialog.h \
     $$PWD/dialogs/logondialog.h \
     $$PWD/dialogs/unlockdialog.h \
+    $$PWD/templates/models/listmodel.h \
+    $$PWD/templates/models/treemodel.h \
     $$PWD/widgets/quickwidget.h
 
 
